@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/css/loading.css}" type="text/css">
+</head>
+<body>
+    <div class="back" id="back">
+        <div class="log" id="log">
+            <div class="logtitle">LOGIN</div><p></p>
+            <form th:action="@{/login}" action="/login" id="logbody" class="logbody" th:method="post">
+                <h6 class="msg" th:text="${msg}"></h6>
+                <br>
+                <input type="text" id="zh" size="20" class="txt" placeholder="账户" name="userName">
+                <br>
+                <input type="password" id="mm" size="20" class="txt" placeholder="密码" name="password">
+                <br>
+                <div class="login-register">
+                <input type="submit" value="登录" id="sub" class="sub">
+                <a th:href="@{/register}"><input type="button" value="注册" class="register"></a>
+                </div>
+                <a th:href="@{/home}"><input type="button" value="游客登录" id="ykbt" class="ykbt"></a>
+            </form>     
+        </div>
+    </div>
+    <div class="con" id="con">
+        <div class="load">
+            <div class="dot" style="--i:0"></div>
+            <div class="dot" style="--i:1"></div>
+            <div class="dot" style="--i:2"></div>
+            <div class="dot" style="--i:3"></div>
+            <div class="dot" style="--i:4"></div>
+            <div class="dot" style="--i:5"></div>
+            <div class="dot" style="--i:6"></div>
+        </div>
+    </div>
+        <footer class="foot">
+        <a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备2022024413号-1</a>
+    </footer>
+</body>
+</html>

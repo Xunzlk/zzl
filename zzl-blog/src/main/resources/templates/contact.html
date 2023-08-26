@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加入我们</title>
+    <link rel="stylesheet" th:href="@{/css/nav.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/css/body.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/css/join.css}" type="text/css">
+</head>
+<body>
+<div th:replace="~{common :: nav}"></div>
+    <div class="mid" id="mid">
+        <div class="joinpart" id="jp">
+            <div class="left">
+                <div class="square"></div>
+                <div class="tit">&emsp;contact<br>&emsp;联系我</div>
+            </div>
+            <div class="right">
+                <div class="goal">
+                    <h1>GOAL</h1>
+                    <p>&emsp;&emsp;My current goal is to find a satisfying job, I hope my first job can last longer, so I hope to find a company with good pay and development prospects, if I can get such a chance, I will try my best to do the job! You can click on the icon below to see my contact information.</p>
+                    <div class="meth">
+                        <div class="icon qq">
+                            <ul>
+                                <li>QQ:1517915967</li>
+                            </ul>
+                        </div>
+                        <div class="icon vx">
+                            <ul>
+                                <li>wechat:zzl520i</li>
+                            </ul>
+                        </div>
+                        <a href="https://space.bilibili.com/21197640?spm_id_from=333.788.0.0" target="top">
+                            <div class="icon bili">
+                                <ul>
+                                    <li>link to my bilibili</li>
+                                </ul>
+                            </div>
+                        </a>
+                        <a href="https://github.com/Xunzlk/zzl" target="new front">
+                            <div class="icon gh">
+                                <ul>
+                                    <li>link to my GitHub</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<footer th:replace="~{common :: foot}"></footer>
+</body>
+</html>

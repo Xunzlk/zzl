@@ -1,0 +1,47 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<nav class="homenav" th:fragment="nav">
+    <div class="navtitle"><strong>ZZL</strong>|MY PROFILE</div>
+    <a th:href="@{/home}">HOME</a>
+    <a th:href="@{/about}">ABOUT</a>
+    <a th:href="@{/blog}">BLOG</a>
+    <a th:href="@{/album}">ALBUM</a>
+    <a th:href="@{/contact}">CONTACT</a>
+    <img class="avatar" th:src="@{${session?.user?.getAvatarURL()}}" th:if="${session?.user?.getId()}"/>
+    <img class="avatar" th:src="@{/image/user.png}" th:unless="${session?.user?.getId}"/>
+    <div class="avatar-panel">
+        <div class="avatar-content">
+
+        <div class="user-name" th:text="${session?.user?.nickName !=null ? session.user.nickName:'Hello,请登录！'}"></div>
+        <a th:href="@{/space}" th:if="${session?.user?.getId()}">
+        <div class="user-center">
+            <span>个人中心</span>
+        </div>
+        </a>
+        <a th:href="@{/logout}" th:if="${session?.user?.userName}">
+            <div class="user-center">
+                <span>退出登录</span>
+            </div>
+        </a>
+            <a th:href="@{/}" th:unless="${session?.user?.userName}">
+                <div class="user-center">
+                    <span>点击登录</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="navanim home"></div>
+    <div class="none"></div>
+</nav>
+<footer class="foot" th:fragment="foot">
+    <p>Cease to struggle and you cease to live</p>
+    <a href="https://beian.miit.gov.cn/" target="_blank">蜀ICP备2022024413号-1</a>
+</footer>
+</body>
+</html>

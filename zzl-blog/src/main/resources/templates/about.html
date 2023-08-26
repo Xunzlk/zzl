@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于</title>
+    <link rel="stylesheet" th:href="@{/css/nav.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/css/body.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/css/about.css}" type="text/css">
+</head>
+<body>
+    <div th:replace="~{common :: nav}"></div>
+    <div class="mid">
+        <div class="headimg">
+            <h1>ABOUT ME</h1>
+        </div>
+        <div class="ab a1">
+            <div class="txt">
+                <h2>关于我</h2>
+                <p>&emsp;&emsp;本科毕业于计算机科学与技术专业</p>
+                <p>&emsp;&emsp;从小就喜爱钻研各种计算机技术</p>
+                <p>&emsp;&emsp;聪明、好学，善于解决各种计算机问题</p>
+                <p>&emsp;&emsp;对计算机有较为系统的理解，学习能力强</p>
+                <p>&emsp;&emsp;目前积极找工作中，看看我肯定不亏！</p>
+            </div>
+            <div class="imghid">
+                <div class="img"></div>
+            </div>
+        </div>
+        <div class="ab a2">
+            <div class="imghid">
+                <div class="img"></div>
+            </div>
+            <div class="txt">
+                <h2>关于网站</h2>
+                <p>&emsp;&emsp;网站采用SpringBoot3整合SSM搭建，前端采用了Thymeleaf模板引擎</p>
+                <p>&emsp;&emsp;数据库采用部署在云端的MySQL,本地用Navicat连接云端数据库进行管理</p>
+                <p>&emsp;&emsp;项目用Maven打包成Jar包丢到服务器上，外部配置好端口和文件存储位置就可以运行！</p>
+                <p>&emsp;&emsp;这一套真的很方便呢！</p>
+            </div>
+        </div>
+        <div class="ab a3">
+            <div class="txt">
+                <h2>所谓觉悟，就是在漆黑的荒野上开辟出一条理当前进的光明大道。</h2>
+            </div>
+            <div class="imghid">
+                <div class="img"></div>
+            </div>
+        </div>
+
+    </div>
+    <footer th:replace="~{common :: foot}"></footer>
+</body>
+</html>

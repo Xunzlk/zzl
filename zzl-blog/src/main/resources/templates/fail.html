@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人中心</title>
+    <link rel="stylesheet" th:href="@{/css/body.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/css/nav.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/css/space.css}" type="text/css">
+</head>
+<body>
+<div th:replace="~{common :: nav}"></div>
+
+<div class="mid">
+    <div class="content">
+
+        <div class="success">[[${msg}]]</div>
+        <div class="sucdiv">
+        <div class="buttons">
+        <a th:href="@{/space}" class="successbtn"><button class="button">返回上页</button></a>
+            <a th:href="@{/logout}" class="successbtn"><button class="button">退出登录</button></a>
+        </div>
+        </div>
+    </div>
+</div>
+
+<footer th:replace="~{common :: foot}"></footer>
+<script th:src="@{/js/uploadImage.js}" type="text/javascript"></script>
+</body>
+</html>

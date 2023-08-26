@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人中心</title>
+    <link rel="stylesheet" th:href="@{/css/nav.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/css/body.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/css/space.css}" type="text/css">
+</head>
+<body>
+<div th:replace="~{common :: nav}"></div>
+
+<div class="mid">
+    <div class="content">
+        <strong class="information">个人信息</strong>
+        <form th:action="@{/space/changePasswd}" class="information-form" method="post">
+            <div>
+                <span>原密码:</span>
+            <input type="password" name="originalPassword" class="input-txt">
+            </div>
+                <div>
+                    <span>新密码:</span>
+                    <input type="password" name="newPassword" class="input-txt">
+                </div>
+            <div>
+                <span>确认密码:</span>
+                <input type="password" name="rePassword" class="input-txt">
+            </div>
+            <div th:text="${msg}" th:if="${msg}"></div>
+            <div class="buttons">
+                <a th:href="@{/space}">
+                    <input type="button" class="button" value="返回上页">
+                </a>
+                <input type="submit" class="button" value="提交更改">
+            </div>
+        </form>
+    </div>
+</div>
+
+<footer th:replace="~{common :: foot}"></footer>
+
+</body>
+</html>

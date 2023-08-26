@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相册</title>
+    <link rel="stylesheet" th:href="@{/css/body.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/css/nav.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/css/album.css}" type="text/css">
+</head>
+<body>
+<div th:replace="~{common :: nav}"></div>
+
+    <div class="mid">
+        <ul id="banner" class="banner"></ul>
+    </div>
+
+<footer th:replace="~{common :: foot}"></footer>
+
+    <script src="../js/album.js"></script>
+</body>
+</html>

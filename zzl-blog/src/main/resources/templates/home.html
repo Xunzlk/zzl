@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/Loading.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/css/homestyle.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/css/body.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/css/nav.css}" type="text/css">
+    <!-- <script src="../js/Loading.js"></script> -->
+    <title>ZZL的主页</title>
+</head>
+<body>
+<div th:replace="~{common :: nav}"></div>
+    <main class="main">
+    <section class="sec">
+        <div class="titleimg">
+            <div class="title">
+                &emsp;Cease to struggle <br>
+                and you cease to live
+            </div>
+        </div>
+    </section>
+    <section class="sec">
+        <a th:href="@{about}">
+            <div class="part1 pt">
+                <div class="imghid"><div class="img"></div></div>
+                <div class="txt">
+                    <h1>关于</h1>
+                    <p>&emsp;&emsp;有关我的一些信息</p>
+                    <p>&emsp;&emsp;For some information about me, you can learn about my background and other related information from here</p>
+                </div>
+            </div>
+        </a>
+        <a th:href="@{/blog}">
+            <div class="part2 pt">
+                <div class="txt">
+                    <h1>博客</h1>
+                    <p>&emsp;关于我的博客</p>
+                    <p>&emsp;About my blog, some learning process is recorded, you can learn about my learning experience here</p>
+                </div>
+                <div class="imghid"><div class="img"></div></div>
+            </div>
+        </a>
+        <a th:href="@{/album}">
+            <div class="part3 pt">
+                <div class="imghid"><div class="img"></div></div>
+                <div class="txt">
+                    <h1>相册</h1>
+                    <p>&emsp;&emsp;我的相册</p>
+                    <p>&emsp;&emsp;My photo album, about some works of art that I like</p>
+                </div>
+            </div>
+        </a>
+        <a th:href="@{/contact}">
+            <div class="part4 pt">
+                <div class="txt">
+                    <h1>联系</h1>
+                    <p>&emsp;&emsp;联系我</p>
+                    <p>&emsp;&emsp;My contact information, welcome everyone who is interested to communicate with me</p>
+                </div>
+                <div class="imghid"><div class="img"></div></div>
+            </div>
+        </a>
+    </section>
+<footer th:replace="~{common :: foot}"></footer>
+    
+    </main>
+</body>
+</html>

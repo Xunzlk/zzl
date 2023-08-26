@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的博客</title>
+    <link rel="stylesheet" th:href="@{/css/nav.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/css/body.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{/css/blog.css}" type="text/css">
+</head>
+<body>
+<div th:replace="~{common :: nav}"></div>
+    <div class="mid">
+        <div class="content">
+            <div class="con c1">
+                <div class="imghid">
+                    <div class="img"></div>
+                </div>
+                <div class="txt">
+                    <h2>Sunny Land</h2>
+                    <p>&emsp;&emsp;学习M_Studio大佬制作的第一个较完整的游戏。</p>
+                </div>
+            </div>
+            <div class="con c2">
+                <div class="imghid">
+                    <div class="img"></div>
+                </div>
+                <div class="txt">
+                    <h2>WEB 课表</h2>
+                    <p>&emsp;&emsp;内容介绍</p>
+                </div>
+            </div>
+            <div class="con c3">
+                <div class="imghid">
+                    <div class="img"></div>
+                </div>
+                <div class="txt">
+                    <h2>WEB 电子相册</h2>
+                    <p>&emsp;&emsp;内容介绍</p>
+                </div>
+            </div>
+        </div>
+        <div class="pri">
+                <div class="prihead">
+                    <a href="@{/join}"><div class="tx"></div></a>
+                    <h2>ZZL</h2>
+                    <p>生命不息,学习不止</p>
+                </div>
+            <div class="tag">
+                <h2>TAG</h2>
+                <p>Java&emsp;&emsp;HTML&emsp;&emsp;CSS&emsp;&emsp;JavaScript&emsp;SpringBoot&emsp;SSM&emsp;&emsp;&emsp;Python&emsp;Pytorch&emsp;&emsp;AI Painting</p>
+            </div>
+        </div>
+    </div>
+<footer th:replace="~{common :: foot}"></footer>
+</body>
+</html>

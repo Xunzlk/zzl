@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zzl.zzlblog.mapper.UserMapper">
+    <insert id="registerUser">
+        INSERT INTO user (nick_name, user_name, password)
+        VALUES (#{nickName}, #{userName}, #{password})
+    </insert>
+
+    <update id="uploadAvatar">
+        UPDATE user SET avatarURL= #{avatarURL} WHERE id = #{id}
+    </update>
+    <update id="updateDescription">
+        UPDATE user SET description= #{description} WHERE id = #{id}
+    </update>
+    <update id="updateNickName">
+        UPDATE user SET nick_name= #{nickName} WHERE id = #{id}
+    </update>
+    <update id="updatePassword">
+        UPDATE user SET password= #{password} WHERE id = #{id}
+    </update>
+
+    <select id="getUserById" resultType="com.zzl.zzlblog.bean.User">
+        SELECT * FROM user WHERE id = #{id}
+    </select>
+
+    <select id="getUserByUserNameAndPassword" resultType="com.zzl.zzlblog.bean.User">
+        SELECT * FROM user WHERE user_name = #{userName} AND password = #{password}
+    </select>
+    <select id="getUserByUserName" resultType="com.zzl.zzlblog.bean.User">
+        SELECT * FROM user WHERE user_name = #{userName}
+    </select>
+</mapper>
